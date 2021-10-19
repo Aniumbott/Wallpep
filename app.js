@@ -7,6 +7,8 @@ const more = document.querySelector(".more");
 let page = 1;
 let fetchLink;
 let currenSearch;
+let images = [];
+let overlays = [];
 
 // Event Listners
 searchInput.addEventListener("input", updateInput);
@@ -35,6 +37,12 @@ async function fetchApi(url) {
 }
 
 function generatePictures(data) {
+  images.forEach((img, index) => {
+    img.addEventListener("click", () => {
+      overlays[index].classList.toggle("active");
+    });
+  });
+
   data.photos.forEach((photo) => {
     const galleryImage = document.createElement("div");
     galleryImage.classList.add("gallery-image");
@@ -45,12 +53,9 @@ function generatePictures(data) {
     <a class = "download" href=${photo.src.large}>Download</a></div>`;
     gallery.appendChild(galleryImage);
   });
-  events();
-}
 
-function events() {
-  const images = document.querySelectorAll(".img");
-  const overlays = document.querySelectorAll(".overlay");
+  images = document.querySelectorAll(".img");
+  overlays = document.querySelectorAll(".overlay");
   images.forEach((img, index) => {
     img.addEventListener("click", () => {
       overlays[index].classList.toggle("active");

@@ -145,10 +145,19 @@ nav a {
   margin: 1rem;
   font-size: 1.1rem;
   color: #e07f86;
+  transition: all 0.2s ease;
 }
 
 .download {
   color: #ffc58c;
+}
+
+.photographer:hover {
+  color: #e0434e;
+}
+
+.download:hover {
+  color: #ffa347;
 }
 
 /* Footer */
