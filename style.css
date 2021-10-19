@@ -203,11 +203,8 @@ footer img:hover {
 }
 
 @media screen and (max-width: 1059px) {
-  .form-wraper {
-    flex: 1 1 100rem;
-  }
-  .contact img {
-    display: none;
+  footer img {
+    margin: 0;
   }
 
   footer ul {
