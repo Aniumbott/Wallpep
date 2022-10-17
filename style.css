@@ -108,23 +108,21 @@ nav a {
   overflow: hidden;
   border-radius: 20px;
   position: relative;
+  transition: all 0.5s ease;
 }
-
 
 .gallery-image:hover {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
 }
 
-
 .gallery-image img {
   height: 100%;
   object-fit: cover;
-
+  transition: all 0.5s ease;
 }
 
 .gallery-image img:hover{
   scale: 1.2;
-  transition: all 0.5s ease;
 }
 
 .overlay {
